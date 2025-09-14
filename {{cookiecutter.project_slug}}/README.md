@@ -1,7 +1,3 @@
-# {{ cookiecutter.project_name }}
-
-{{ cookiecutter.project_short_description }}
-
 [![CI/CD]({{ cookiecutter.repository_url }}/actions/workflows/checks.yml/badge.svg)]({{ cookiecutter.repository_url }}/actions/workflows/release-please.yml)
 [![GitHub release (latest by date)](https://img.shields.io/github/v/release/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }})]({{ cookiecutter.repository_url }}/releases)
 [![codecov](https://codecov.io/gh/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}/branch/main/graph/badge.svg)](https://codecov.io/gh/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }})
@@ -13,6 +9,10 @@
 [![Type checked with mypy](https://img.shields.io/badge/mypy-checked-blue.svg)](http://mypy-lang.org/)
 [![Security: bandit](https://img.shields.io/badge/security-bandit-green.svg)](https://github.com/PyCQA/bandit)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+
+# {{ cookiecutter.project_name }}
+
+{{ cookiecutter.project_short_description }}
 
 ## Documentation
 

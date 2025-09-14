@@ -54,6 +54,11 @@ make build         # Build package
 - Automatic PyPI publishing
 - Version management via Release Please
 
+## 🎯 Example Project
+
+See a real example of this template in action:
+**[demo-example-package](https://github.com/serafinovsky/demo-example-package)**
+
 ## 📄 License
 
 MIT License
