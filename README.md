@@ -53,7 +53,6 @@ make build         # Build package
 - CI/CD pipeline with GitHub Actions
 - Automatic PyPI publishing
 - Version management via Release Please
-- Complete documentation in Russian
 
 ## 📄 License
 
