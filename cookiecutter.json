@@ -1,0 +1,15 @@
+{
+  "project_name": "My Python Package",
+  "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '-').replace('_', '-') }}",
+  "package_name": "{{ cookiecutter.project_slug.replace('-', '_') }}",
+  "project_short_description": "A modern Python package with complete CI/CD setup",
+  "author_name": "Your Name",
+  "author_email": "your.email@example.com",
+  "github_username": "yourusername",
+  "version": "0.1.0",
+  "python_versions": "3.11, 3.12, 3.13",
+  "use_docker": ["no", "yes"],
+  "repository_url": "https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}",
+  "publish_to_pypi": ["no", "yes"],
+  "year": "{% now 'utc', '%Y' %}"
+}

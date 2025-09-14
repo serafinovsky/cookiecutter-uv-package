@@ -1,0 +1,167 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "{{ cookiecutter.project_slug }}"
+dynamic = ["version"]
+description = "{{ cookiecutter.project_short_description }}"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [
+    {name = "{{ cookiecutter.author_name }}", email = "{{ cookiecutter.author_email }}"},
+]
+keywords = ["python", "package"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    {% for version in cookiecutter.python_versions.split(',') -%}
+    "Programming Language :: Python :: {{ version.strip() }}",
+    {% endfor -%}
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Typing :: Typed",
+]
+requires-python = ">={{ cookiecutter.python_versions.split(',')[0].strip() }}"
+dependencies = []
+
+[dependency-groups]
+dev = [
+    "hatch==1.14.1",
+    "mypy==1.17.1",
+    "pytest==8.4.1",
+    "pytest-asyncio==1.1.0",
+    "pytest-cov==6.2.1",
+    "ruff==0.12.7",
+    "bandit==1.8.0"
+]
+
+[project.urls]
+Homepage = "{{ cookiecutter.repository_url }}"
+Documentation = "{{ cookiecutter.repository_url }}#readme"
+Repository = "{{ cookiecutter.repository_url }}"
+Issues = "{{ cookiecutter.repository_url }}/issues"
+
+[project.scripts]
+
+[tool.hatch.version]
+path = "{{ cookiecutter.package_name }}/__init__.py"
+
+[tool.hatch.build.targets.wheel]
+packages = ["{{ cookiecutter.package_name }}"]
+
+[tool.ruff]
+target-version = "py{{ cookiecutter.python_versions.split(',')[0].strip().replace('.', '') }}"
+line-length = 120
+respect-gitignore = true
+
+[tool.ruff.lint]
+select = [
+    "E",        # pycodestyle errors
+    "W",        # pycodestyle warnings
+    "F",        # pyflakes
+    "I",        # isort
+    "B",        # flake8-bugbear
+    "C4",       # flake8-comprehensions
+    "UP",       # pyupgrade
+    "ASYNC",    # async/await rules
+    "S",        # security rules
+    "LOG",      # logging best practices
+    "Q",        # quotes standardization
+    "SLF",      # private member access
+    "SIM",      # code simplification
+    "TC",       # type checking
+    "ARG",      # unused arguments
+    "PTH",      # pathlib best practices
+    "N",        # naming conventions
+    "T20"       # print statement usage
+]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["S101", "SLF001", "SIM117", "ARG001"]
+"examples/*" = ["ARG001", "S104"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+skip-magic-trailing-comma = false
+line-ending = "auto"
+
+[tool.ruff.lint.flake8-quotes]
+inline-quotes = "double"
+multiline-quotes = "double"
+docstring-quotes = "double"
+
+[tool.mypy]
+python_version = "{{ cookiecutter.python_versions.split(',')[0].strip() }}"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+check_untyped_defs = true
+disallow_untyped_decorators = true
+no_implicit_optional = true
+warn_redundant_casts = true
+warn_unused_ignores = true
+warn_no_return = true
+warn_unreachable = true
+strict_equality = true
+
+[[tool.mypy.overrides]]
+module = [
+    "tests.*",
+]
+disallow_untyped_defs = false
+disallow_incomplete_defs = false
+check_untyped_defs = false
+disallow_untyped_decorators = false
+
+[[tool.mypy.overrides]]
+module = [
+    "examples.*",
+]
+disallow_untyped_defs = false
+disallow_incomplete_defs = false
+check_untyped_defs = false
+disallow_untyped_decorators = false
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+addopts = [
+    "--strict-markers",
+    "--strict-config",
+    "--cov={{ cookiecutter.package_name }}",
+    "--cov-report=term-missing",
+    "--cov-report=html",
+    "--cov-report=xml",
+]
+asyncio_mode = "auto"
+
+[tool.coverage.run]
+relative_files = true
+source = ["{{ cookiecutter.package_name }}"]
+omit = [
+    "*/tests/*",
+    "*/test_*",
+]
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "def __repr__",
+    "if self.debug:",
+    "if settings.DEBUG",
+    "raise AssertionError",
+    "raise NotImplementedError",
+    "if 0:",
+    "if __name__ == .__main__.:",
+    "class .*\\bProtocol\\):",
+    "@(abc\\.)?abstractmethod",
+    "logger.*",
+    "if TYPE_CHECKING:"
+]

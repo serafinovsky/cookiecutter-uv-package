@@ -1,0 +1,16 @@
+{
+  "packages": {
+    ".": {
+      "release-type": "python",
+      "package-name": "{{ cookiecutter.project_slug }}",
+      "changelog-path": "CHANGELOG.md",
+      "extra-files": [
+        {
+          "type": "generic",
+          "path": "{{ cookiecutter.package_name }}/__init__.py",
+          "glob": false
+        }
+      ]
+    }
+  }
+}
