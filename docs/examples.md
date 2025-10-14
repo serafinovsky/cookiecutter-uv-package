@@ -15,7 +15,7 @@ Here are examples of using this cookiecutter template for different types of Pyt
 For a basic library without publishing:
 
 ```bash
-cookiecutter https://github.com/serafinovsky/cookiecutter-py-package
+cookiecutter https://github.com/serafinovsky/cookiecutter-uv-package
 
 # Choose these options:
 deployment_setup: github-ci
@@ -30,7 +30,7 @@ license: MIT
 For a package you plan to publish and maintain:
 
 ```bash
-cookiecutter https://github.com/serafinovsky/cookiecutter-py-package
+cookiecutter https://github.com/serafinovsky/cookiecutter-uv-package
 
 # Choose these options:
 deployment_setup: github-ci-pypi
@@ -45,7 +45,7 @@ license: MIT
 For company-internal tools:
 
 ```bash
-cookiecutter https://github.com/serafinovsky/cookiecutter-py-package
+cookiecutter https://github.com/serafinovsky/cookiecutter-uv-package
 
 # Choose these options:
 deployment_setup: none

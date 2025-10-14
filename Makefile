@@ -13,10 +13,10 @@ lint: ## Check code with linters
 	@make update-deps
 	uv run ruff check hooks/ --preview
 	uv run ruff check tests/ --preview
-	uv run ruff check cookiecutter_py_package/ --preview
+	uv run ruff check cookiecutter_uv_package/ --preview
 	uv run ruff format hooks/
 	uv run ruff format tests/
-	uv run ruff format cookiecutter_py_package/
+	uv run ruff format cookiecutter_uv_package/
 
 security: ## Run security checks
 	@make update-deps
@@ -26,10 +26,10 @@ format: ## Format code
 	@make update-deps
 	uv run ruff format hooks/
 	uv run ruff format tests/
-	uv run ruff format cookiecutter_py_package/
+	uv run ruff format cookiecutter_uv_package/
 	uv run ruff check hooks/ --preview --fix
 	uv run ruff check tests/ --preview --fix
-	uv run ruff check cookiecutter_py_package/ --preview --fix
+	uv run ruff check cookiecutter_uv_package/ --preview --fix
 
 build: ## Build package
 	@make update-deps
@@ -50,7 +50,7 @@ dev-setup: ## Setup development environment
 
 version: ## Show current version
 	@make update-deps
-	@uv run python -c "import cookiecutter_py_package; print(cookiecutter_py_package.__version__)"
+	@uv run python -c "import cookiecutter_uv_package; print(cookiecutter_uv_package.__version__)"
 
 tags: ## List all git tags
 	@git tag --sort=-version:refname

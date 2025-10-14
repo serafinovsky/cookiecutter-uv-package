@@ -2,7 +2,7 @@
   "packages": {
     ".": {
       "release-type": "python",
-      "package-name": "cookiecutter-py-package",
+      "package-name": "cookiecutter-uv-package",
       "prerelease": false,
       "include-component-in-tag": false,
       "changelog-path": "CHANGELOG.md",

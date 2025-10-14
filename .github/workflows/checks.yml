@@ -48,10 +48,10 @@ jobs:
         run: |
           uv run ruff check hooks/ --preview
           uv run ruff check tests/ --preview
-          uv run ruff check cookiecutter_py_package/ --preview
+          uv run ruff check cookiecutter_uv_package/ --preview
           uv run ruff format hooks/ --check
           uv run ruff format tests/ --check
-          uv run ruff format cookiecutter_py_package/ --check
+          uv run ruff format cookiecutter_uv_package/ --check
           uv run bandit -c pyproject.toml -r . -lll
 
   test:

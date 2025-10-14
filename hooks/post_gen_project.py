@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Post-generation hook for cookiecutter-py-package.
+Post-generation hook for cookiecutter-uv-package.
 
 This hook removes files and directories that are not needed based on the user's choices.
 """
