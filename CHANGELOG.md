@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.5](https://github.com/serafinovsky/cookiecutter-uv-package/compare/v1.0.4...v1.0.5) (2025-10-14)
+
+
+### Bug Fixes
+
+* rename package ([#12](https://github.com/serafinovsky/cookiecutter-uv-package/issues/12)) ([ca538f5](https://github.com/serafinovsky/cookiecutter-uv-package/commit/ca538f504f69fccf19f115479d2bbcdafa3b0026))
+
 ## [1.0.4](https://github.com/serafinovsky/cookiecutter-py-package/compare/v1.0.3...v1.0.4) (2025-10-14)
 
 
