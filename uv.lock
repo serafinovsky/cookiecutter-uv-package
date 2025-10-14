@@ -274,7 +274,7 @@ wheels = [
 ]
 
 [[package]]
-name = "cookiecutter-python-package"
+name = "cookiecutter-py-package"
 source = { editable = "." }
 dependencies = [
     { name = "click" },

@@ -15,7 +15,7 @@ pip install cookiecutter
 Run cookiecutter with our template:
 
 ```bash
-cookiecutter https://github.com/serafinovsky/cookiecutter-python-package
+cookiecutter https://github.com/serafinovsky/cookiecutter-py-package
 ```
 
 You will be prompted to fill several configuration fields. For detailed description of all parameters, see [Prompt Arguments](prompt-arguments.md).

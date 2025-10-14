@@ -1,10 +1,10 @@
 site_name: Cookiecuter Python Package
 site_description: Modern Python package template with complete CI/CD setup
 site_author: serafinovsky
-site_url: https://serafinovsky.github.io/cookiecutter-python-package
+site_url: https://serafinovsky.github.io/cookiecutter-py-package
 
-repo_name: serafinovsky/cookiecutter-python-package
-repo_url: https://github.com/serafinovsky/cookiecutter-python-package
+repo_name: serafinovsky/cookiecutter-py-package
+repo_url: https://github.com/serafinovsky/cookiecutter-py-package
 edit_uri: edit/main/docs/
 
 theme:

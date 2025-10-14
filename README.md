@@ -1,12 +1,12 @@
 # Python Package Template
 
 ![Cookiecutter](https://img.shields.io/badge/cookiecutter-template-red)
-[![Tests passed](https://github.com/serafinovsky/cookiecutter-python-package/workflows/Checks/badge.svg)](https://github.com/serafinovsky/cookiecutter-python-package/actions)
+[![Tests passed](https://github.com/serafinovsky/cookiecutter-py-package/workflows/Checks/badge.svg)](https://github.com/serafinovsky/cookiecutter-py-package/actions)
 ![License](https://img.shields.io/badge/license-MIT-green)
 ![Tox](https://img.shields.io/badge/tox-multi--version-blue)
 ![Pytest](https://img.shields.io/badge/pytest-testing-blue)
 ![Ruff](https://img.shields.io/badge/ruff-linting-blue)
-[![Documentation](https://img.shields.io/badge/docs-latest-blue)](https://serafinovsky.github.io/cookiecutter-python-package)
+[![Documentation](https://img.shields.io/badge/docs-latest-blue)](https://serafinovsky.github.io/cookiecutter-py-package)
 
 **Cookiecutter template for creating Python packages with complete CI/CD setup and automatic PyPI publishing.**
 
@@ -27,7 +27,7 @@
 pip install cookiecutter
 
 # Create project
-cookiecutter https://github.com/serafinovsky/cookiecutter-python-package
+cookiecutter https://github.com/serafinovsky/cookiecutter-py-package
 
 # Setup development environment
 cd your-project-name
@@ -38,10 +38,10 @@ make dev-setup
 
 ```bash
 # Install the CLI tool
-pip install cookiecutter-python-package
+pip install cookiecutter-py-package
 
 # Get help with available arguments
-cookiecutter-python-package --help
+cookiecutter-py-package --help
 
 # Create project with CLI
 python-package-template
@@ -92,10 +92,10 @@ See a real example of this template in action:
 
 ## Documentation
 
-- **[Full Documentation](https://serafinovsky.github.io/cookiecutter-python-package)** - Complete guide and reference
-- **[Tutorial](https://serafinovsky.github.io/cookiecutter-python-package/tutorial/)** - Step-by-step setup guide
-- **[Features](https://serafinovsky.github.io/cookiecutter-python-package/features/)** - Detailed feature descriptions
-- **[Examples](https://serafinovsky.github.io/cookiecutter-python-package/examples/)** - Usage examples and scenarios
+- **[Full Documentation](https://serafinovsky.github.io/cookiecutter-py-package)** - Complete guide and reference
+- **[Tutorial](https://serafinovsky.github.io/cookiecutter-py-package/tutorial/)** - Step-by-step setup guide
+- **[Features](https://serafinovsky.github.io/cookiecutter-py-package/features/)** - Detailed feature descriptions
+- **[Examples](https://serafinovsky.github.io/cookiecutter-py-package/examples/)** - Usage examples and scenarios
 
 ## License
 

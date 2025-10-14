@@ -10,7 +10,7 @@ from helpers import (
     cleanup_project,
 )
 
-from cookiecutter_python_package.cli import get_template_dir, main
+from cookiecutter_py_package.cli import get_template_dir, main
 
 
 class TestGetTemplateDir:
@@ -53,7 +53,7 @@ class TestCLIMain:
         assert result.exit_code == 0
         assert "version" in result.output.lower()
 
-    @patch("cookiecutter_python_package.cli.cookiecutter")
+    @patch("cookiecutter_py_package.cli.cookiecutter")
     def test_basic_project_creation(self, mock_cookiecutter):
         """Test basic project creation with default options."""
         with tempfile.TemporaryDirectory() as mock_project_dir:
@@ -78,7 +78,7 @@ class TestCLIMain:
             assert call_args[1]["skip_if_file_exists"] is False
             assert call_args[1]["config_file"] is None
 
-    @patch("cookiecutter_python_package.cli.cookiecutter")
+    @patch("cookiecutter_py_package.cli.cookiecutter")
     def test_project_creation_with_all_flags(self, mock_cookiecutter):
         """Test project creation with all CLI flags enabled."""
         with tempfile.TemporaryDirectory() as temp_dir, tempfile.TemporaryDirectory() as mock_project_dir:
@@ -113,7 +113,7 @@ class TestCLIMain:
             assert call_args[1]["skip_if_file_exists"] is True
             assert call_args[1]["config_file"] == str(config_file)
 
-    @patch("cookiecutter_python_package.cli.cookiecutter")
+    @patch("cookiecutter_py_package.cli.cookiecutter")
     def test_project_creation_with_short_flags(self, mock_cookiecutter):
         """Test project creation with short flags."""
         with tempfile.TemporaryDirectory() as temp_dir, tempfile.TemporaryDirectory() as mock_project_dir:
@@ -138,7 +138,7 @@ class TestCLIMain:
             assert call_args[1]["overwrite_if_exists"] is True
             assert call_args[1]["skip_if_file_exists"] is True
 
-    @patch("cookiecutter_python_package.cli.cookiecutter")
+    @patch("cookiecutter_py_package.cli.cookiecutter")
     def test_cookiecutter_error_handling(self, mock_cookiecutter):
         """Test that cookiecutter errors are handled properly."""
         mock_cookiecutter.side_effect = Exception("Test error")
@@ -165,7 +165,7 @@ class TestCLIMain:
         assert result.exit_code != 0
         assert "does not exist" in result.output.lower()
 
-    @patch("cookiecutter_python_package.cli.cookiecutter")
+    @patch("cookiecutter_py_package.cli.cookiecutter")
     def test_default_output_directory(self, mock_cookiecutter):
         """Test that default output directory is current working directory."""
         with tempfile.TemporaryDirectory() as mock_project_dir:
@@ -182,7 +182,7 @@ class TestCLIMain:
             # The output_dir should be the string representation of current directory
             assert Path(call_args[1]["output_dir"]).exists()
 
-    @patch("cookiecutter_python_package.cli.cookiecutter")
+    @patch("cookiecutter_py_package.cli.cookiecutter")
     def test_template_directory_is_correct(self, mock_cookiecutter):
         """Test that the correct template directory is passed to cookiecutter."""
         with tempfile.TemporaryDirectory() as mock_project_dir:
@@ -203,7 +203,7 @@ class TestCLIMain:
             assert (template_path / "cookiecutter.json").exists()
             assert (template_path / "{{cookiecutter.project_slug}}").exists()
 
-    @patch("cookiecutter_python_package.cli.cookiecutter")
+    @patch("cookiecutter_py_package.cli.cookiecutter")
     def test_output_messages(self, mock_cookiecutter):
         """Test that correct output messages are displayed."""
         with tempfile.TemporaryDirectory() as temp_dir:
