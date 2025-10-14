@@ -1,4 +1,4 @@
-"""CLI interface for cookiecutter-py-package."""
+"""CLI interface for cookiecutter-uv-package."""
 
 import sys
 from pathlib import Path
