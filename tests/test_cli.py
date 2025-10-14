@@ -4,8 +4,8 @@ from unittest.mock import patch
 
 from click.testing import CliRunner
 from helpers import (
-    assert_file_exists,
     assert_file_contains,
+    assert_file_exists,
     assert_file_not_exists,
     cleanup_project,
 )
@@ -251,7 +251,9 @@ class TestCLIRealGeneration:
                 assert_file_exists(project_path, "WORKFLOW.md")
 
                 assert_file_contains(project_path, "pyproject.toml", 'name = "my-python-package"')
-                assert_file_contains(project_path, "pyproject.toml", 'description = "A modern Python package with complete CI/CD setup"')
+                assert_file_contains(
+                    project_path, "pyproject.toml", 'description = "A modern Python package with complete CI/CD setup"'
+                )
                 assert_file_contains(project_path, "pyproject.toml", 'license = {text = "MIT"}')
 
                 assert_file_contains(project_path, "README.md", "# My Python Package")
@@ -272,8 +274,7 @@ default_context:
 """)
 
             result = self.runner.invoke(
-                main,
-                ["--output-dir", temp_dir, "--no-input", "--config-file", str(config_file)]
+                main, ["--output-dir", temp_dir, "--no-input", "--config-file", str(config_file)]
             )
 
             assert result.exit_code == 0
@@ -309,8 +310,7 @@ default_context:
 """)
 
             result = self.runner.invoke(
-                main,
-                ["--output-dir", temp_dir, "--no-input", "--config-file", str(config_file)]
+                main, ["--output-dir", temp_dir, "--no-input", "--config-file", str(config_file)]
             )
 
             assert result.exit_code == 0
@@ -336,8 +336,7 @@ default_context:
 """)
 
             result = self.runner.invoke(
-                main,
-                ["--output-dir", temp_dir, "--no-input", "--config-file", str(config_file)]
+                main, ["--output-dir", temp_dir, "--no-input", "--config-file", str(config_file)]
             )
 
             assert result.exit_code == 0
@@ -362,8 +361,7 @@ default_context:
 """)
 
             result = self.runner.invoke(
-                main,
-                ["--output-dir", temp_dir, "--no-input", "--config-file", str(config_file)]
+                main, ["--output-dir", temp_dir, "--no-input", "--config-file", str(config_file)]
             )
 
             assert result.exit_code == 0
