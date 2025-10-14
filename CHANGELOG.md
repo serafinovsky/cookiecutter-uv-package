@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.2](https://github.com/serafinovsky/cookiecutter-python-package/compare/v1.0.1...v1.0.2) (2025-10-14)
+
+
+### Bug Fixes
+
+* remove attestations and duplicate trigger from publish workflow ([#6](https://github.com/serafinovsky/cookiecutter-python-package/issues/6)) ([18c1765](https://github.com/serafinovsky/cookiecutter-python-package/commit/18c17650535a487a39bca22769896efe01e068aa))
+
 ## [1.0.1](https://github.com/serafinovsky/cookiecutter-python-package/compare/v1.0.0...v1.0.1) (2025-10-14)
 
 
