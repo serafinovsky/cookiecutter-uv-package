@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.6](https://github.com/serafinovsky/cookiecutter-uv-package/compare/v1.0.5...v1.0.6) (2025-10-14)
+
+
+### Bug Fixes
+
+* **deps:** bump the all-pip-deps group with 3 updates ([#14](https://github.com/serafinovsky/cookiecutter-uv-package/issues/14)) ([e8210eb](https://github.com/serafinovsky/cookiecutter-uv-package/commit/e8210eb963b1c69398ef35ba5d911d541281251d))
+
 ## [1.0.5](https://github.com/serafinovsky/cookiecutter-uv-package/compare/v1.0.4...v1.0.5) (2025-10-14)
 
 
