@@ -3,7 +3,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "cookiecutter-python-package"
+name = "cookiecutter-py-package"
 dynamic = ["version"]
 
 
@@ -54,19 +54,19 @@ dev = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/serafinovsky/cookiecutter-python-package"
-Documentation = "https://serafinovsky.github.io/cookiecutter-python-package"
-Repository = "https://github.com/serafinovsky/cookiecutter-python-package"
-Issues = "https://github.com/serafinovsky/cookiecutter-python-package/issues"
+Homepage = "https://github.com/serafinovsky/cookiecutter-py-package"
+Documentation = "https://serafinovsky.github.io/cookiecutter-py-package"
+Repository = "https://github.com/serafinovsky/cookiecutter-py-package"
+Issues = "https://github.com/serafinovsky/cookiecutter-py-package/issues"
 
 [project.scripts]
-cookiecutter-python-package = "cookiecutter_python_package.cli:main"
+cookiecutter-py-package = "cookiecutter_py_package.cli:main"
 
 [tool.hatch.version]
-path = "cookiecutter_python_package/__init__.py"
+path = "cookiecutter_py_package/__init__.py"
 
 [tool.hatch.build.targets.wheel]
-packages = ["cookiecutter_python_package"]
+packages = ["cookiecutter_py_package"]
 
 [tool.hatch.build.targets.wheel.force-include]
 "cookiecutter.json" = "cookiecutter.json"
@@ -148,10 +148,10 @@ allowlist_externals = ["ruff", "bandit", "pytest", "mkdocs"]
 commands = [
   ["ruff", "check", "hooks/", "--preview"],
   ["ruff", "check", "tests/", "--preview"],
-  ["ruff", "check", "cookiecutter_python_package/", "--preview"],
+  ["ruff", "check", "cookiecutter_py_package/", "--preview"],
   ["ruff", "format", "hooks/", "--check"],
   ["ruff", "format", "tests/", "--check"],
-  ["ruff", "format", "cookiecutter_python_package/", "--check"],
+  ["ruff", "format", "cookiecutter_py_package/", "--check"],
   ["pytest", "--strict-markers", "--strict-config"],
   ["mkdocs", "build", "-q"],
 ]

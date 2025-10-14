@@ -87,7 +87,7 @@ Choose license:
 ## Example interactive prompt
 
 ```bash
-$ cookiecutter https://github.com/serafinovsky/cookiecutter-python-package
+$ cookiecutter https://github.com/serafinovsky/cookiecutter-py-package
 
 project_name [My Python Package]: Data Processor
 project_short_description [A modern Python package with complete CI/CD setup]: Advanced data processing library

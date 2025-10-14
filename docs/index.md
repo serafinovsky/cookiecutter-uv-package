@@ -14,7 +14,7 @@
 pip install cookiecutter
 
 # Create project
-cookiecutter https://github.com/serafinovsky/cookiecutter-python-package
+cookiecutter https://github.com/serafinovsky/cookiecutter-py-package
 
 # Setup development environment
 cd your-project-name
@@ -25,7 +25,7 @@ make dev-setup
 
 ```bash
 # Install the CLI tool
-pip install cookiecutter-python-package
+pip install cookiecutter-py-package
 
 # Create project with CLI
 python-package-template
