@@ -1,0 +1,37 @@
+site_name: Cookiecuter Python Package
+site_description: Modern Python package template with complete CI/CD setup
+site_author: serafinovsky
+site_url: https://serafinovsky.github.io/cookiecutter-python-package
+
+repo_name: serafinovsky/cookiecutter-python-package
+repo_url: https://github.com/serafinovsky/cookiecutter-python-package
+edit_uri: edit/main/docs/
+
+theme:
+  name: readthedocs
+  highlightjs: true
+  hljs_languages:
+    - python
+    - bash
+    - yaml
+
+plugins:
+  - search
+
+markdown_extensions:
+  - codehilite
+  - toc:
+      permalink: true
+  - fenced_code
+
+nav:
+  - Home: index.md
+  - Features:
+      - features/index.md
+      - features/ci-cd.md
+      - features/code-quality.md
+      - features/makefile.md
+      - features/publishing.md
+  - Tutorial: tutorial.md
+  - Prompt Arguments: prompt-arguments.md
+  - Examples: examples.md

@@ -1,0 +1,18 @@
+{
+  "packages": {
+    ".": {
+      "release-type": "python",
+      "package-name": "cookiecutter-python-package",
+      "prerelease": false,
+      "include-component-in-tag": false,
+      "changelog-path": "CHANGELOG.md",
+      "extra-files": [
+        {
+          "type": "generic",
+          "path": "pyproject.toml",
+          "glob": false
+        }
+      ]
+    }
+  }
+}

@@ -47,7 +47,7 @@ git commit -m "chore: initial commit"
    - **Secret:** paste your Personal Access Token
    - Click "Add secret"
 
-{% if cookiecutter.publish_to_pypi == 'yes' -%}
+{% if cookiecutter.deployment_setup == 'github-ci-pypi' -%}
 
 #### PyPI API Token (for publishing)
 
@@ -91,3 +91,12 @@ git remote add origin git@github.com:{{ cookiecutter.github_username }}/{{ cooki
 git branch -M main
 git push -u origin main
 ```
+
+## 5. Verify setup
+
+After setup:
+
+1. **Check that CI/CD works:**
+
+   - Go to Actions tab in your GitHub repository
+   - Ensure all workflows run successfully

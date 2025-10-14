@@ -5,6 +5,8 @@ on:
     branches:
       - master
       - main
+    paths:
+      - '{{ cookiecutter.package_name }}/__init__.py'
   workflow_dispatch:
 
 jobs:
@@ -30,7 +32,7 @@ jobs:
         run: uv sync --dev --frozen
 
       - name: Run tests with coverage
-        run: uv run pytest --cov=${{ cookiecutter.package_name }} --cov-report=xml --cov-report=html
+        run: uv run pytest --cov={{ cookiecutter.package_name }} --cov-report=xml --cov-report=html
 
       - name: Upload coverage reports to Codecov
         uses: codecov/codecov-action@v5

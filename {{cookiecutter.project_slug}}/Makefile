@@ -61,6 +61,7 @@ clean: ## Clean temporary files
 	find . -type d -name ".mypy_cache" -exec rm -rf {} +
 	find . -type d -name "dist" -exec rm -rf {} +
 	find . -type d -name "build" -exec rm -rf {} +
+	find . -type d -name ".tox" -exec rm -rf {} +
 
 build: ## Build package
 	@make update-deps

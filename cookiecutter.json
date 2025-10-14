@@ -6,10 +6,10 @@
   "author_name": "Your Name",
   "author_email": "your.email@example.com",
   "github_username": "yourusername",
+  "repository_url": "https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}",
   "version": "0.1.0",
   "python_versions": "3.11, 3.12, 3.13",
   "use_docker": ["no", "yes"],
-  "repository_url": "https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}",
-  "publish_to_pypi": ["no", "yes"],
-  "year": "{% now 'utc', '%Y' %}"
+  "deployment_setup": ["none", "github-ci", "github-ci-pypi"],
+  "license": ["MIT", "Apache-2.0", "BSD-3-Clause", "GPL-3.0", "ISC", "none"]
 }

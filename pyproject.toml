@@ -1,0 +1,157 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "cookiecutter-python-package"
+dynamic = ["version"]
+
+
+description = "Modern cookiecutter template for creating Python packages with complete CI/CD setup and automatic PyPI publishing."
+readme = "README.md"
+license = {text = "MIT"}
+authors = [
+    {name = "Mark Serafinovsky", email = "m.serafinovsky@gmail.com"},
+]
+keywords = ["cookiecutter", "template", "python", "package", "ci-cd", "pypi", "github-actions", "development"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Framework :: Pytest",
+    "Framework :: Hatch",
+    "Topic :: Software Development :: Code Generators",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Software Development :: Testing",
+    "Topic :: Software Development :: Quality Assurance",
+    "Topic :: Software Development :: Build Tools",
+    "Topic :: Documentation",
+    "Topic :: Internet :: WWW/HTTP :: Dynamic Content",
+    "Environment :: Web Environment",
+    "Typing :: Typed",
+]
+requires-python = ">=3.9"
+dependencies = [
+    "cookiecutter==2.6.0",
+    "click==8.1.0",
+]
+
+[dependency-groups]
+dev = [
+    "hatch==1.14.2",
+    "pytest==8.4.2",
+    "ruff==0.13.2",
+    "bandit==1.8.6",
+    "mkdocs==1.5.0",
+    "tox==4.30.3"
+]
+
+[project.urls]
+Homepage = "https://github.com/serafinovsky/cookiecutter-python-package"
+Documentation = "https://serafinovsky.github.io/cookiecutter-python-package"
+Repository = "https://github.com/serafinovsky/cookiecutter-python-package"
+Issues = "https://github.com/serafinovsky/cookiecutter-python-package/issues"
+
+[project.scripts]
+cookiecutter-python-package = "cookiecutter_python_package.cli:main"
+
+[tool.hatch.version]
+path = "cookiecutter_python_package/__init__.py"
+
+[tool.hatch.build.targets.wheel]
+packages = ["cookiecutter_python_package"]
+
+[tool.hatch.build.targets.wheel.force-include]
+"cookiecutter.json" = "cookiecutter.json"
+"{{cookiecutter.project_slug}}" = "{{cookiecutter.project_slug}}"
+"hooks" = "hooks"
+
+
+[tool.ruff]
+target-version = "py39"
+line-length = 120
+respect-gitignore = true
+
+[tool.ruff.lint]
+select = [
+    "E",        # pycodestyle errors
+    "W",        # pycodestyle warnings
+    "F",        # pyflakes
+    "I",        # isort
+    "B",        # flake8-bugbear
+    "C4",       # flake8-comprehensions
+    "UP",       # pyupgrade
+    "FAST",     # fastapi specific rules
+    "ASYNC",    # async/await rules
+    "S",        # security rules
+    "LOG",      # logging best practices
+    "Q",        # quotes standardization
+    "SLF",      # private member access
+    "SIM",      # code simplification
+    "TC",       # type checking
+    "ARG",      # unused arguments
+    "PTH",      # pathlib best practices
+    "N",        # naming conventions
+    "T20"       # print statement usage
+
+]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["S101", "SLF001", "SIM117", "ARG001", "UP035", "UP006"]
+
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+skip-magic-trailing-comma = false
+line-ending = "auto"
+
+[tool.ruff.lint.flake8-quotes]
+inline-quotes = "double"
+multiline-quotes = "double"
+docstring-quotes = "double"
+
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+addopts = [
+    "--strict-markers",
+    "--strict-config",
+    "-v"
+]
+
+
+[tool.bandit]
+exclude_dirs = ["tests", ".venv", ".history", "{{cookiecutter.project_slug}}", ".tox"]
+
+
+[tool.tox]
+requires = ["tox>=4.19"]
+env_list = ["py39", "py310", "py311", "py312", "py313"]
+
+
+[tool.tox.env_run_base]
+description = "Run tests and checks"
+usedevelop = true
+extras = ["dev"]
+allowlist_externals = ["ruff", "bandit", "pytest", "mkdocs"]
+commands = [
+  ["ruff", "check", "hooks/", "--preview"],
+  ["ruff", "check", "tests/", "--preview"],
+  ["ruff", "check", "cookiecutter_python_package/", "--preview"],
+  ["ruff", "format", "hooks/", "--check"],
+  ["ruff", "format", "tests/", "--check"],
+  ["ruff", "format", "cookiecutter_python_package/", "--check"],
+  ["pytest", "--strict-markers", "--strict-config"],
+  ["mkdocs", "build", "-q"],
+]
