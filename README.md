@@ -1,7 +1,7 @@
 # Python Package Template
 
 ![Cookiecutter](https://img.shields.io/badge/cookiecutter-template-red)
-[![Tests passed](https://github.com/serafinovsky/cookiecutter-python-package/workflows/checks/badge.svg)](https://github.com/serafinovsky/cookiecutter-python-package/actions)
+[![Tests passed](https://github.com/serafinovsky/cookiecutter-python-package/workflows/Checks/badge.svg)](https://github.com/serafinovsky/cookiecutter-python-package/actions)
 ![License](https://img.shields.io/badge/license-MIT-green)
 ![Tox](https://img.shields.io/badge/tox-multi--version-blue)
 ![Pytest](https://img.shields.io/badge/pytest-testing-blue)
