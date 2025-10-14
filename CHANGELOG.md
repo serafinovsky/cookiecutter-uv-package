@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.1](https://github.com/serafinovsky/cookiecutter-python-package/compare/v1.0.0...v1.0.1) (2025-10-14)
+
+
+### Bug Fixes
+
+* fixing publishing, dock and readme ([#4](https://github.com/serafinovsky/cookiecutter-python-package/issues/4)) ([5334b7f](https://github.com/serafinovsky/cookiecutter-python-package/commit/5334b7f5ff5e81baba223a7043ee283ccb3385da))
+
 ## [1.0.0](https://github.com/serafinovsky/cookiecutter-python-package/compare/v0.1.0...v1.0.0) (2025-10-14)
 
 
