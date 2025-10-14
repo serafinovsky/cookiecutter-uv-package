@@ -1,5 +1,4 @@
 import pytest
-
 from helpers import (
     assert_file_contains,
     assert_file_exists,
