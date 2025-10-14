@@ -3,11 +3,8 @@ name: Publish to PyPI
 on:
   release:
     types: [published]
-  push:
-    tags: ["v*"]
 
 permissions:
-  id-token: write
   contents: write
 
 jobs:
@@ -40,7 +37,6 @@ jobs:
         with:
           user: __token__
           password: ${{ "{{" }} secrets.PYPI_API_TOKEN {{ "}}" }}
-          attestations: true
 
       - name: Create GitHub Release and upload assets
         uses: softprops/action-gh-release@v2
