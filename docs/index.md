@@ -28,10 +28,10 @@ make dev-setup
 pip install cookiecutter-uv-package
 
 # Create project with CLI
-python-package-template
+cookiecutter-uv-package
 
 # Or with custom options
-python-package-template --output-dir /path/to/projects --no-input
+cookiecutter-uv-package --output-dir /path/to/projects --no-input
 
 # Setup development environment
 cd your-project-name
