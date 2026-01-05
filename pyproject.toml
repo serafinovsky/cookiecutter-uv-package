@@ -40,17 +40,17 @@ classifiers = [
 requires-python = ">=3.9"
 dependencies = [
     "cookiecutter==2.6.0",
-    "click==8.1.8",
+    "click==8.3.1",
 ]
 
 [dependency-groups]
 dev = [
-    "hatch==1.15.1",
-    "pytest==8.4.2",
-    "ruff==0.14.7",
-    "bandit==1.8.6",
+    "hatch==1.16.2",
+    "pytest==9.0.2",
+    "ruff==0.14.10",
+    "bandit==1.9.2",
     "mkdocs==1.6.1",
-    "tox==4.30.3"
+    "tox==4.33.0"
 ]
 
 [project.urls]
