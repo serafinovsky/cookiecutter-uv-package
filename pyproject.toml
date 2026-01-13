@@ -47,7 +47,7 @@ dependencies = [
 dev = [
     "hatch==1.15.1",
     "pytest==8.4.2",
-    "ruff==0.14.7",
+    "ruff==0.14.11",
     "bandit==1.8.6",
     "mkdocs==1.6.1",
     "tox==4.30.3"
