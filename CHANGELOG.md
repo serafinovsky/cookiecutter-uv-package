@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.12](https://github.com/serafinovsky/cookiecutter-uv-package/compare/v1.0.11...v1.0.12) (2026-02-13)
+
+
+### Bug Fixes
+
+* **deps-dev:** bump ruff from 0.14.14 to 0.15.0 in the all-pip-deps group ([#29](https://github.com/serafinovsky/cookiecutter-uv-package/issues/29)) ([3a4cf5b](https://github.com/serafinovsky/cookiecutter-uv-package/commit/3a4cf5bfe975432567ad937d93674d87c338f12d))
+
 ## [1.0.11](https://github.com/serafinovsky/cookiecutter-uv-package/compare/v1.0.10...v1.0.11) (2026-02-05)
 
 
